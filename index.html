@@ -151,16 +151,42 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Card 1: Bee Connect -->
-                <div
-                    class="bg-euro-dark rounded-xl overflow-hidden hover:transform hover:-translate-y-2 transition-all duration-300 border border-slate-800 hover:border-euro-amber group">
-                    <div class="h-56 overflow-hidden relative bg-white">
-                        <img src="./assets/bee-connect/001.jpeg" alt="Bee Connect"
-                            class="w-full h-full object-contain p-4 group-hover:scale-110 transition-transform duration-500">
+                <!-- Card 1: Bee Connect (JPEG, JPEG, JPEG) -->
+                <div class="bg-euro-dark rounded-xl overflow-hidden hover:transform hover:-translate-y-2 transition-all duration-300 border border-slate-800 hover:border-euro-amber group slider-card"
+                    data-slider-id="slider-bee-connect">
+                    <!-- Slider Container -->
+                    <div class="h-56 relative bg-white group/slider">
+                        <!-- Slides -->
+                        <div class="slides w-full h-full relative overflow-hidden">
+                            <img src="./assets/bee-connect/001.jpeg"
+                                class="slide absolute inset-0 w-full h-full object-contain p-4 transition-opacity duration-500 opacity-100 z-10"
+                                data-index="0">
+                            <img src="./assets/bee-connect/002.jpeg"
+                                class="slide absolute inset-0 w-full h-full object-contain p-4 transition-opacity duration-500 opacity-0 z-0"
+                                data-index="1">
+                        </div>
+
+                        <!-- Badge -->
                         <div
-                            class="absolute top-4 left-4 bg-euro-amber text-euro-navy text-xs font-bold px-3 py-1 rounded-full">
+                            class="absolute top-4 left-4 bg-euro-amber text-euro-navy text-xs font-bold px-3 py-1 rounded-full z-20">
                             SCOOTER</div>
+
+                        <!-- Navigation Arrows (Hidden by default, shown on hover) -->
+                        <button
+                            class="prev-btn absolute left-2 top-1/2 -translate-y-1/2 bg-euro-navy/80 text-white w-8 h-8 rounded-full flex items-center justify-center opacity-0 group-hover/slider:opacity-100 transition-opacity z-20 hover:bg-euro-amber hover:text-euro-navy">
+                            <i class="fa-solid fa-chevron-left text-xs"></i>
+                        </button>
+                        <button
+                            class="next-btn absolute right-2 top-1/2 -translate-y-1/2 bg-euro-navy/80 text-white w-8 h-8 rounded-full flex items-center justify-center opacity-0 group-hover/slider:opacity-100 transition-opacity z-20 hover:bg-euro-amber hover:text-euro-navy">
+                            <i class="fa-solid fa-chevron-right text-xs"></i>
+                        </button>
+
+                        <!-- Dots -->
+                        <div class="dots-container absolute bottom-2 left-1/2 -translate-x-1/2 flex space-x-2 z-20">
+                            <!-- Dots injected by JS -->
+                        </div>
                     </div>
+
                     <div class="p-8">
                         <h3 class="text-2xl font-bold mb-2 group-hover:text-euro-amber transition-colors">Bee Connect
                         </h3>
@@ -171,15 +197,29 @@
                     </div>
                 </div>
 
-                <!-- Card 2: Bee Connect UHP -->
-                <div
-                    class="bg-euro-dark rounded-xl overflow-hidden hover:transform hover:-translate-y-2 transition-all duration-300 border border-slate-800 hover:border-euro-amber group">
-                    <div class="h-56 overflow-hidden relative bg-white">
-                        <img src="./assets/bee-connect-UHP/001.png" alt="Bee Connect UHP"
-                            class="w-full h-full object-contain p-4 group-hover:scale-110 transition-transform duration-500">
+                <!-- Card 2: Bee Connect UHP (PNG, PNG, PNG) -->
+                <div class="bg-euro-dark rounded-xl overflow-hidden hover:transform hover:-translate-y-2 transition-all duration-300 border border-slate-800 hover:border-euro-amber group slider-card"
+                    data-slider-id="slider-bee-uhl">
+                    <div class="h-56 relative bg-white group/slider">
+                        <div class="slides w-full h-full relative overflow-hidden">
+                            <img src="./assets/bee-connect-UHP/001.png"
+                                class="slide absolute inset-0 w-full h-full object-contain p-4 transition-opacity duration-500 opacity-100 z-10"
+                                data-index="0">
+                            <img src="./assets/bee-connect-UHP/002.png"
+                                class="slide absolute inset-0 w-full h-full object-contain p-4 transition-opacity duration-500 opacity-0 z-0"
+                                data-index="1">
+                        </div>
                         <div
-                            class="absolute top-4 left-4 bg-euro-amber text-euro-navy text-xs font-bold px-3 py-1 rounded-full">
+                            class="absolute top-4 left-4 bg-euro-amber text-euro-navy text-xs font-bold px-3 py-1 rounded-full z-20">
                             SCOOTER HIGH-PERFORMANCE</div>
+                        <button
+                            class="prev-btn absolute left-2 top-1/2 -translate-y-1/2 bg-euro-navy/80 text-white w-8 h-8 rounded-full flex items-center justify-center opacity-0 group-hover/slider:opacity-100 transition-opacity z-20 hover:bg-euro-amber hover:text-euro-navy"><i
+                                class="fa-solid fa-chevron-left text-xs"></i></button>
+                        <button
+                            class="next-btn absolute right-2 top-1/2 -translate-y-1/2 bg-euro-navy/80 text-white w-8 h-8 rounded-full flex items-center justify-center opacity-0 group-hover/slider:opacity-100 transition-opacity z-20 hover:bg-euro-amber hover:text-euro-navy"><i
+                                class="fa-solid fa-chevron-right text-xs"></i></button>
+                        <div class="dots-container absolute bottom-2 left-1/2 -translate-x-1/2 flex space-x-2 z-20">
+                        </div>
                     </div>
                     <div class="p-8">
                         <h3 class="text-2xl font-bold mb-2 group-hover:text-euro-amber transition-colors">Bee Connect
@@ -191,15 +231,32 @@
                     </div>
                 </div>
 
-                <!-- Card 3: Roadhound -->
-                <div
-                    class="bg-euro-dark rounded-xl overflow-hidden hover:transform hover:-translate-y-2 transition-all duration-300 border border-slate-800 hover:border-euro-amber group">
-                    <div class="h-56 overflow-hidden relative bg-white">
-                        <img src="./assets/roadhound/001.png" alt="Roadhound"
-                            class="w-full h-full object-contain p-4 group-hover:scale-110 transition-transform duration-500">
+                <!-- Card 3: Roadhound (JPEG, JPEG, PNG) -->
+                <div class="bg-euro-dark rounded-xl overflow-hidden hover:transform hover:-translate-y-2 transition-all duration-300 border border-slate-800 hover:border-euro-amber group slider-card"
+                    data-slider-id="slider-roadhound">
+                    <div class="h-56 relative bg-white group/slider">
+                        <div class="slides w-full h-full relative overflow-hidden">
+                            <img src="./assets/roadhound/001.png"
+                                class="slide absolute inset-0 w-full h-full object-contain p-4 transition-opacity duration-500 opacity-100 z-10"
+                                data-index="0">
+                            <img src="./assets/roadhound/002.png"
+                                class="slide absolute inset-0 w-full h-full object-contain p-4 transition-opacity duration-500 opacity-0 z-0"
+                                data-index="1">
+                            <img src="./assets/roadhound/003.png"
+                                class="slide absolute inset-0 w-full h-full object-contain p-4 transition-opacity duration-500 opacity-0 z-0"
+                                data-index="2">
+                        </div>
                         <div
-                            class="absolute top-4 left-4 bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-full">
+                            class="absolute top-4 left-4 bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-full z-20">
                             SPORT TOURING</div>
+                        <button
+                            class="prev-btn absolute left-2 top-1/2 -translate-y-1/2 bg-euro-navy/80 text-white w-8 h-8 rounded-full flex items-center justify-center opacity-0 group-hover/slider:opacity-100 transition-opacity z-20 hover:bg-euro-amber hover:text-euro-navy"><i
+                                class="fa-solid fa-chevron-left text-xs"></i></button>
+                        <button
+                            class="next-btn absolute right-2 top-1/2 -translate-y-1/2 bg-euro-navy/80 text-white w-8 h-8 rounded-full flex items-center justify-center opacity-0 group-hover/slider:opacity-100 transition-opacity z-20 hover:bg-euro-amber hover:text-euro-navy"><i
+                                class="fa-solid fa-chevron-right text-xs"></i></button>
+                        <div class="dots-container absolute bottom-2 left-1/2 -translate-x-1/2 flex space-x-2 z-20">
+                        </div>
                     </div>
                     <div class="p-8">
                         <h3 class="text-2xl font-bold mb-2 group-hover:text-euro-amber transition-colors">Roadhound</h3>
@@ -210,15 +267,29 @@
                     </div>
                 </div>
 
-                <!-- Card 4: Protorq Extreme -->
-                <div
-                    class="bg-euro-dark rounded-xl overflow-hidden hover:transform hover:-translate-y-2 transition-all duration-300 border border-slate-800 hover:border-euro-amber group">
-                    <div class="h-56 overflow-hidden relative bg-white">
-                        <img src="./assets/protorq-extreme/001.jpeg" alt="Protorq Extreme"
-                            class="w-full h-full object-contain p-4 group-hover:scale-110 transition-transform duration-500">
+                <!-- Card 4: Protorq Extreme (JPEG, PNG, JPEG) -->
+                <div class="bg-euro-dark rounded-xl overflow-hidden hover:transform hover:-translate-y-2 transition-all duration-300 border border-slate-800 hover:border-euro-amber group slider-card"
+                    data-slider-id="slider-protorq">
+                    <div class="h-56 relative bg-white group/slider">
+                        <div class="slides w-full h-full relative overflow-hidden">
+                            <img src="./assets/protorq-extreme/001.png"
+                                class="slide absolute inset-0 w-full h-full object-contain p-4 transition-opacity duration-500 opacity-100 z-10"
+                                data-index="0">
+                            <img src="./assets/protorq-extreme/002.png"
+                                class="slide absolute inset-0 w-full h-full object-contain p-4 transition-opacity duration-500 opacity-0 z-0"
+                                data-index="1">
+                        </div>
                         <div
-                            class="absolute top-4 left-4 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full">
+                            class="absolute top-4 left-4 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full z-20">
                             RACING / SPORT</div>
+                        <button
+                            class="prev-btn absolute left-2 top-1/2 -translate-y-1/2 bg-euro-navy/80 text-white w-8 h-8 rounded-full flex items-center justify-center opacity-0 group-hover/slider:opacity-100 transition-opacity z-20 hover:bg-euro-amber hover:text-euro-navy"><i
+                                class="fa-solid fa-chevron-left text-xs"></i></button>
+                        <button
+                            class="next-btn absolute right-2 top-1/2 -translate-y-1/2 bg-euro-navy/80 text-white w-8 h-8 rounded-full flex items-center justify-center opacity-0 group-hover/slider:opacity-100 transition-opacity z-20 hover:bg-euro-amber hover:text-euro-navy"><i
+                                class="fa-solid fa-chevron-right text-xs"></i></button>
+                        <div class="dots-container absolute bottom-2 left-1/2 -translate-x-1/2 flex space-x-2 z-20">
+                        </div>
                     </div>
                     <div class="p-8">
                         <h3 class="text-2xl font-bold mb-2 group-hover:text-euro-amber transition-colors">Protorq
@@ -230,15 +301,29 @@
                     </div>
                 </div>
 
-                <!-- Card 5: Trailhound SCR -->
-                <div
-                    class="bg-euro-dark rounded-xl overflow-hidden hover:transform hover:-translate-y-2 transition-all duration-300 border border-slate-800 hover:border-euro-amber group">
-                    <div class="h-56 overflow-hidden relative bg-white">
-                        <img src="./assets/trailhound-SCR/001.png" alt="Trailhound SCR"
-                            class="w-full h-full object-contain p-4 group-hover:scale-110 transition-transform duration-500">
+                <!-- Card 5: Trailhound SCR (PNG, PNG) 2 Images Only -->
+                <div class="bg-euro-dark rounded-xl overflow-hidden hover:transform hover:-translate-y-2 transition-all duration-300 border border-slate-800 hover:border-euro-amber group slider-card"
+                    data-slider-id="slider-trailhound-scr">
+                    <div class="h-56 relative bg-white group/slider">
+                        <div class="slides w-full h-full relative overflow-hidden">
+                            <img src="./assets/trailhound-SCR/001.png"
+                                class="slide absolute inset-0 w-full h-full object-contain p-4 transition-opacity duration-500 opacity-100 z-10"
+                                data-index="0">
+                            <img src="./assets/trailhound-SCR/002.png"
+                                class="slide absolute inset-0 w-full h-full object-contain p-4 transition-opacity duration-500 opacity-0 z-0"
+                                data-index="1">
+                        </div>
                         <div
-                            class="absolute top-4 left-4 bg-green-600 text-white text-xs font-bold px-3 py-1 rounded-full">
+                            class="absolute top-4 left-4 bg-green-600 text-white text-xs font-bold px-3 py-1 rounded-full z-20">
                             SCRAMBLER</div>
+                        <button
+                            class="prev-btn absolute left-2 top-1/2 -translate-y-1/2 bg-euro-navy/80 text-white w-8 h-8 rounded-full flex items-center justify-center opacity-0 group-hover/slider:opacity-100 transition-opacity z-20 hover:bg-euro-amber hover:text-euro-navy"><i
+                                class="fa-solid fa-chevron-left text-xs"></i></button>
+                        <button
+                            class="next-btn absolute right-2 top-1/2 -translate-y-1/2 bg-euro-navy/80 text-white w-8 h-8 rounded-full flex items-center justify-center opacity-0 group-hover/slider:opacity-100 transition-opacity z-20 hover:bg-euro-amber hover:text-euro-navy"><i
+                                class="fa-solid fa-chevron-right text-xs"></i></button>
+                        <div class="dots-container absolute bottom-2 left-1/2 -translate-x-1/2 flex space-x-2 z-20">
+                        </div>
                     </div>
                     <div class="p-8">
                         <h3 class="text-2xl font-bold mb-2 group-hover:text-euro-amber transition-colors">Trailhound SCR
@@ -250,15 +335,29 @@
                     </div>
                 </div>
 
-                <!-- Card 6: Trailhound STR -->
-                <div
-                    class="bg-euro-dark rounded-xl overflow-hidden hover:transform hover:-translate-y-2 transition-all duration-300 border border-slate-800 hover:border-euro-amber group">
-                    <div class="h-56 overflow-hidden relative bg-white">
-                        <img src="./assets/trailhound-STR/001.png" alt="Trailhound STR"
-                            class="w-full h-full object-contain p-4 group-hover:scale-110 transition-transform duration-500">
+                <!-- Card 6: Trailhound STR (PNG, PNG, PNG) -->
+                <div class="bg-euro-dark rounded-xl overflow-hidden hover:transform hover:-translate-y-2 transition-all duration-300 border border-slate-800 hover:border-euro-amber group slider-card"
+                    data-slider-id="slider-trailhound-str">
+                    <div class="h-56 relative bg-white group/slider">
+                        <div class="slides w-full h-full relative overflow-hidden">
+                            <img src="./assets/trailhound-STR/001.png"
+                                class="slide absolute inset-0 w-full h-full object-contain p-4 transition-opacity duration-500 opacity-100 z-10"
+                                data-index="0">
+                            <img src="./assets/trailhound-STR/002.png"
+                                class="slide absolute inset-0 w-full h-full object-contain p-4 transition-opacity duration-500 opacity-0 z-0"
+                                data-index="1">
+                        </div>
                         <div
-                            class="absolute top-4 left-4 bg-green-700 text-white text-xs font-bold px-3 py-1 rounded-full">
+                            class="absolute top-4 left-4 bg-green-700 text-white text-xs font-bold px-3 py-1 rounded-full z-20">
                             ADVENTURE</div>
+                        <button
+                            class="prev-btn absolute left-2 top-1/2 -translate-y-1/2 bg-euro-navy/80 text-white w-8 h-8 rounded-full flex items-center justify-center opacity-0 group-hover/slider:opacity-100 transition-opacity z-20 hover:bg-euro-amber hover:text-euro-navy"><i
+                                class="fa-solid fa-chevron-left text-xs"></i></button>
+                        <button
+                            class="next-btn absolute right-2 top-1/2 -translate-y-1/2 bg-euro-navy/80 text-white w-8 h-8 rounded-full flex items-center justify-center opacity-0 group-hover/slider:opacity-100 transition-opacity z-20 hover:bg-euro-amber hover:text-euro-navy"><i
+                                class="fa-solid fa-chevron-right text-xs"></i></button>
+                        <div class="dots-container absolute bottom-2 left-1/2 -translate-x-1/2 flex space-x-2 z-20">
+                        </div>
                     </div>
                     <div class="p-8">
                         <h3 class="text-2xl font-bold mb-2 group-hover:text-euro-amber transition-colors">Trailhound STR
@@ -410,6 +509,88 @@
         </div>
     </footer>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sliders = document.querySelectorAll('.slider-card');
+
+            sliders.forEach(slider => {
+                const slides = slider.querySelectorAll('.slide');
+                const prevBtn = slider.querySelector('.prev-btn');
+                const nextBtn = slider.querySelector('.next-btn');
+                const dotsContainer = slider.querySelector('.dots-container');
+                let currentIndex = 0;
+
+                // Initialize
+                if (slides.length <= 1) {
+                    prevBtn.style.display = 'none';
+                    nextBtn.style.display = 'none';
+                    return; // No slider needed
+                }
+
+                // Create dots
+                slides.forEach((_, index) => {
+                    const dot = document.createElement('button');
+                    dot.className = `w-2 h-2 rounded-full transition-colors ${index === 0 ? 'bg-euro-amber' : 'bg-slate-300'}`;
+                    dot.ariaLabel = `Go to slide ${index + 1}`;
+                    dot.addEventListener('click', (e) => {
+                        e.stopPropagation(); // Prevent card click if any
+                        goToSlide(index);
+                    });
+                    dotsContainer.appendChild(dot);
+                });
+
+                const updateSlides = () => {
+                    slides.forEach((slide, index) => {
+                        if (index === currentIndex) {
+                            slide.classList.remove('opacity-0', 'z-0');
+                            slide.classList.add('opacity-100', 'z-10');
+                        } else {
+                            slide.classList.remove('opacity-100', 'z-10');
+                            slide.classList.add('opacity-0', 'z-0');
+                        }
+                    });
+
+                    // Update dots
+                    const dots = dotsContainer.children;
+                    for (let i = 0; i < dots.length; i++) {
+                        if (i === currentIndex) {
+                            dots[i].classList.remove('bg-slate-300');
+                            dots[i].classList.add('bg-euro-amber');
+                        } else {
+                            dots[i].classList.remove('bg-euro-amber');
+                            dots[i].classList.add('bg-slate-300');
+                        }
+                    }
+                };
+
+                const nextSlide = () => {
+                    currentIndex = (currentIndex + 1) % slides.length;
+                    updateSlides();
+                };
+
+                const prevSlide = () => {
+                    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+                    updateSlides();
+                };
+
+                const goToSlide = (index) => {
+                    currentIndex = index;
+                    updateSlides();
+                };
+
+                // Event Listeners
+                nextBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    nextSlide();
+                });
+
+                prevBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    prevSlide();
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
